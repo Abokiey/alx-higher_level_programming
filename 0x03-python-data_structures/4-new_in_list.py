@@ -7,7 +7,7 @@ def new_in_list(my_list, idx, element):
     elem_no = len(list_cpy)
     if idx < 0:
         return list_cpy
-    if idx >= elem_no
+    if idx >= elem_no:
         return list_cpy
     list_cpy[idx] = element
     return list_cpy
