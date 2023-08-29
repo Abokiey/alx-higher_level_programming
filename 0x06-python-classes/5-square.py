@@ -6,7 +6,7 @@ import sys
 
 class Square:
     """initialize"""
-    def __init__(self, size):
+    def __init__(self, size=0):
         self.__size = size
 
     @property
