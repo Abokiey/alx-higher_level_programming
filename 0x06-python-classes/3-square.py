@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 """square of a number"""
+
+
 class Square:
 
     """initialize"""
