@@ -80,5 +80,5 @@ class Rectangle:
 
     def __del__(self):
         """formatted deletion dunder del"""
-        self.__class__.number_of_instance -= 0
+        self.__class__.number_of_instances -= 0
         print("Bye rectangle...")
