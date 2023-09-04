@@ -10,9 +10,9 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
 
-        self.__class__.number_of_instances += 1
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -80,5 +80,5 @@ class Rectangle:
 
     def __del__(self):
         """formatted deletion dunder del"""
-        self.__class__.number_of_instances -= 0
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
