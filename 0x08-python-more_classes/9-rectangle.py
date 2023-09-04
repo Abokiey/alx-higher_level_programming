@@ -103,4 +103,4 @@ class Rectangle:
     def square(cls, size=0):
         """returns a new rectangle with both height \
         and width being the same"""
-        return cls(size,size)
+        return cls(size, size)
