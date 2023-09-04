@@ -3,7 +3,6 @@
 """Rectangle class"""
 
 
-
 class Rectangle:
     """initialize"""
     def __init__(self, width=0, height=0):
