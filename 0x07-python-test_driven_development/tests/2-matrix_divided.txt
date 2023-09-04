@@ -1,0 +1,28 @@
+=======================
+Test Dtiven development
+=======================
+import the function.
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Tests:
+
+    >>> matrix_divided([[12, 6, 18], [18, 21, 24], [9, 3, 6]], 3)
+    [[4.0, 2.0, 6.0], [6.0, 7.0, 8.0], [3.0, 1.0, 2.0]]
+
+
+    >>> matrix_divided([[8, 10], [12, 4]], 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+    >>> matrix_divided([[6, 9], ["6", 12]], 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+    >>> matrix_divided([[10, 8], [12, 6, 4]], 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size

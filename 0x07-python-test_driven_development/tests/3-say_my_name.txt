@@ -1,0 +1,30 @@
+=======================
+Test Driven Development
+=======================
+
+import module
+-----------------------
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+--------------------------------------------------------------
+
+    >>> say_my_name("Samwel", "Aboki")
+    My name is Samwel Aboki
+
+    >>> say_my_name("bob", "collymore")
+    My name is bob collymore
+
+    >>> say_my_name("ben", 10)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name(777, "bond")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(7, "bill")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
