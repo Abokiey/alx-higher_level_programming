@@ -25,4 +25,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """dunder method"""
-        print("{} {}/{}".format([Rectangle], self.__width, self.__height))
+        return("{} {}/{}".format([Rectangle], self.__width, self.__height))
