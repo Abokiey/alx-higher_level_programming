@@ -11,7 +11,12 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """validates if value is int"""
+        """validates if value is int
+        :name: name
+        :value: int
+        :raises TypeError: <name> must be an integer
+        :raises ValueError: <name> must be greater than 0
+        """
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
