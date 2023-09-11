@@ -15,9 +15,9 @@ Tests:
     >>> bg.integer_validator("score", 3.5)
     Traceback (most recent call last):
         ...
-    TypeError: <name> must be an integer
+    TypeError: score must be an integer
 
     >>> bg.integer_validator("quantity", 0)
     Traceback (most recent call last):
         ...
-    ValueError: <name> must be greater than 0
+    ValueError: quantity must be greater than 0
