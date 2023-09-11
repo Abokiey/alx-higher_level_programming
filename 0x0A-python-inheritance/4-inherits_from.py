@@ -7,6 +7,6 @@ def inherits_from(obj, a_class):
     :a_class:the class to compare against
     :return: if the object is an instance of the class
     """
-    if issubclass(type(obj), a_class) and type(obj) is not a_class:
-        return True
-    return False
+    if getattr(obj, "__class__") == a_class:
+        return False
+    return isinstance(obj, a_class)
