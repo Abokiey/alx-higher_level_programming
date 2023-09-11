@@ -10,4 +10,4 @@ def is_same_class(obj, a_class):
     :a_class: The class to compare against.
     :return: True if obj is an instance of a_class, otherwise False.
     """
-    return isinstance(obj, a_class)
+    return getattr(obj, "__class__") is a_class
