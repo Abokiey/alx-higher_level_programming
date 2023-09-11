@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-    """rectangle module"""
+"""rectangle module"""
 
 
-    BaseGeometry = __import__('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 """rectangle class"""
@@ -25,4 +25,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """dunder method"""
-        return("{} {}/{}".format([Rectangle], self.__width, self.__height))
+        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
