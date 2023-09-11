@@ -21,3 +21,8 @@ Tests:
     Traceback (most recent call last):
         ...
     ValueError: quantity must be greater than 0
+
+    >>> bg.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
