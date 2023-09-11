@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""class inheritance"""
+
+
 def inherits_from(obj, a_class):
     """
     :if the object is an instance of a class that inherited
