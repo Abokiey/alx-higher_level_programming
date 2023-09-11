@@ -3,7 +3,6 @@
 """add new attribute to an object"""
 
 
-
 def add_attribute(obj, att, value):
     """add attribute"""
     if not hasattr(obj, "__dict__"):
