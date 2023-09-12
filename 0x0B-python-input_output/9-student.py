@@ -12,7 +12,8 @@ class Student:
 
     def to_json(self):
         """retrieves the dictionary representation"""
-        return self.__dict__
+        return (self.__dict__)
+
 
 if __name__ == "__main__":
     students = [Student("John", "Doe", 23), Student("Bob", "Dylan", 27)]
