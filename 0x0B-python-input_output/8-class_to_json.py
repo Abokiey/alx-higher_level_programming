@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
-"""import module"""
-
-import json
-
 """return dictionary from a simple data structures """
 
 
