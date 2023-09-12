@@ -6,7 +6,7 @@ import json
 
 def to_json_string(my_obj):
     """serialize to json string"""
-    return (json.dumps(my_obj))
+    return(json.dumps(my_obj))
 
 
 if __name__ == "__main__":
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     print(type(s_my_dict))
 
     try:
-        my_set = {132, 3}
+        my_set = { 132, 3 }
         s_my_set = to_json_string(my_set)
         print(s_my_set)
         print(type(s_my_set))
