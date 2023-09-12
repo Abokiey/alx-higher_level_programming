@@ -9,6 +9,5 @@ def read_file(filename=""):
         print(f.read(), end="")
 
 
-
 if __name__ == "__main__":
     read_file("my_file_0.txt")
