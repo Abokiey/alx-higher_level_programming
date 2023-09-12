@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""json module"""
+
 import json
 
 """json representation of a string"""
