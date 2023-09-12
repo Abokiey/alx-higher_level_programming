@@ -22,8 +22,6 @@ class Student:
             return (dictionary)
 
 if __name__ == "__main__":
-    
-
     student_1 = Student("John", "Doe", 23)
     student_2 = Student("Bob", "Dylan", 27)
 
