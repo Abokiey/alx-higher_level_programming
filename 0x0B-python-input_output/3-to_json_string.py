@@ -6,7 +6,7 @@ import json
 
 def to_json_string(my_obj):
     """serialize to json string"""
-    return(json.dumps(my_obj))
+    return json.dumps(my_obj)
 
 
 if __name__ == "__main__":
