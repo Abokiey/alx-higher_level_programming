@@ -10,6 +10,9 @@ class Student:
         self.last_name = last_name
         self.age = age
 
+    """json method"""
+
+
     def to_json(self):
         """retrieves the dictionary representation"""
         return (self.__dict__)
