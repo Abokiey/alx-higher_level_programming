@@ -65,6 +65,23 @@ class Rectangle(Base):
         self.__y = value
 
 
+    def area(self):
+        """area of a rectangle"""
+        return (self.__height * self.width)
+
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(3, 2)
+    print(r1.area())
+
+    r2 = Rectangle(2, 10)
+    print(r2.area())
+
+    r3 = Rectangle(8, 7, 0, 0, 12)
+    print(r3.area())
+
+
 if __name__ == "__main__":
 
     try:
