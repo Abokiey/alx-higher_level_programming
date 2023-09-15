@@ -76,50 +76,18 @@ class Rectangle(Base):
             rectangle += ("#" * self.width) + "\n"
         print(rectangle,end="")
 
+    def __str__(self):
+        """dunder method"""
+        return ("[rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, 
+            self.y, self.width, self.height))
+
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(4, 6)
+    r1 = Rectangle(2, 3, 2, 2)
     r1.display()
 
     print("---")
 
-    r1 = Rectangle(2, 2)
-    r1.display()
-
-
-if __name__ == "__main__":
-
-    r1 = Rectangle(3, 2)
-    print(r1.area())
-
-    r2 = Rectangle(2, 10)
-    print(r2.area())
-
-    r3 = Rectangle(8, 7, 0, 0, 12)
-    print(r3.area())
-
-
-if __name__ == "__main__":
-
-    try:
-        Rectangle(10, "2")
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
-    try:
-        r = Rectangle(10, 2)
-        r.width = -10
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
-    try:
-        r = Rectangle(10, 2)
-        r.x = {}
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
-    try:
-        Rectangle(10, 2, 3, -1)
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    r2 = Rectangle(3, 2, 1, 0)
+    r2.display()
