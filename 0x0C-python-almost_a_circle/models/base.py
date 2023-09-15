@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""import modules"""
+
+import json
+
 """base model class"""
 
 
@@ -13,21 +17,24 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """serialize to json string"""
+        if list_dictionaries is None or list_dictionaries ==  []:
+            return ("[]")
+        return json.dumps(list_dictionaries)
+
             
 
 if __name__ == "__main__":
 
-    b1 = Base()
-    print(b1.id)
+    from rectangle import Rectangle
 
-    b2 = Base()
-    print(b2.id)
-
-    b3 = Base()
-    print(b3.id)
-
-    b4 = Base(12)
-    print(b4.id)
-
-    b5 = Base()
-    print(b5.id)
+    r1 = Rectangle(10, 7, 2, 8)
+    dictionary = r1.to_dictionary()
+    json_dictionary = Base.to_json_string([dictionary])
+    print(dictionary)
+    print(type(dictionary))
+    print(json_dictionary)
+    print(type(json_dictionary))
