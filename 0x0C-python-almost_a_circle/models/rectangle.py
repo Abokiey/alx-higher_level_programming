@@ -64,10 +64,28 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-
     def area(self):
         """area of a rectangle"""
         return (self.__height * self.width)
+
+    def display(self):
+        """display a rectangle with # in stdout"""
+        rectangle = self.y * "\n"
+        for i in range(self.height):
+            rectangle += (" " * self.x)
+            rectangle += ("#" * self.width) + "\n"
+        print(rectangle,end="")
+
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(4, 6)
+    r1.display()
+
+    print("---")
+
+    r1 = Rectangle(2, 2)
+    r1.display()
 
 
 if __name__ == "__main__":
