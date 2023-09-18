@@ -5,6 +5,8 @@
 import unittest
 from models.square import Square
 from models.base import Base
+
+
 class TestSquare(unittest.TestCase):
 
     def setUp(self):
@@ -40,6 +42,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1_dict, {'id': 7, 'size': 5, 'x': 1, 'y': 2})
         s2_dict = self.s2.to_dictionary()
         self.assertEqual(s2_dict, {'id': 8, 'size': 3, 'x': 0, 'y': 0})
+
 
 if __name__ == "__main__":
     unittest.main()

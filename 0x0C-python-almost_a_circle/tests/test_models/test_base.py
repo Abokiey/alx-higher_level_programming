@@ -7,6 +7,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestShapes(unittest.TestCase):
 
     def setUp(self):
@@ -30,7 +31,9 @@ class TestShapes(unittest.TestCase):
                 os.remove(csv_file)
 
     def test_save_to_file_csv_and_load_from_file_csv(self):
-        """Test saving and loading from CSV files for the Rectangle and Square"""
+        """Test saving and loading from CSV
+        files for the Rectangle and Square
+        """
         Rectangle.save_to_file_csv(self.list_rectangles_input)
         Square.save_to_file_csv(self.list_squares_input)
 
@@ -39,6 +42,7 @@ class TestShapes(unittest.TestCase):
 
         self.assertEqual(len(loaded_rectangles), len(self.list_rectangles_input))
         self.assertEqual(len(loaded_squares), len(self.list_squares_input))
+
 
 if __name__ == "__main__":
     unittest.main()

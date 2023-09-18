@@ -87,8 +87,9 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """assign key/value argument to each attribute"""
         if args:
-            self.id, self.width, self.height, self.x, self.y = args
-
+            keys = ["id", "width", "height", "x", "y"]
+            for key, value in zip(keys, args):
+                setattr(self, key, value)
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)

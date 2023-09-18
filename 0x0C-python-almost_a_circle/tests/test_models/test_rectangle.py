@@ -24,7 +24,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(expected_r1, actual_r1)
         self.assertEqual(expected_r2, actual_r2)
 
-
     def test_update_args(self):
         expected_r1 = "[Rectangle] (9) 3/1 - 4/7"
         self.r1.update(9, 4, 7, 3, 1)
@@ -35,12 +34,19 @@ class TestRectangle(unittest.TestCase):
         self.r2.update(id=5, width=2, height=4, x=1, y=2)
         self.assertEqual(str(self.r2), "[Rectangle] (5) 1/2 - 2/4")
 
-
     def test_to_dictionary(self):
         r1_dict = self.r1.to_dictionary()
-        self.assertEqual(r1_dict, {'id': 7, 'width': 5, 'height': 10, 'x': 1, 'y': 2})
+        self.assertEqual(r1_dict, {'id': 7,
+                                   'width': 5,
+                                   'height': 10,
+                                   'x': 1,
+                                   'y': 2})
         r2_dict = self.r2.to_dictionary()
-        self.assertEqual(r2_dict, {'id': 8, 'width': 3, 'height': 6, 'x': 0, 'y': 0})
+        self.assertEqual(r2_dict, {'id': 8,
+                                   'width': 3,
+                                   'height': 6,
+                                   'x': 0,
+                                   'y': 0})
 
 
 if __name__ == "__main__":
