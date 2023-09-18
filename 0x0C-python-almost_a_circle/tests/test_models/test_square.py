@@ -3,8 +3,8 @@
 """import modules"""
 
 import unittest
-from square import Square
-from base import Base
+from models.square import Square
+from models.base import Base
 class TestSquare(unittest.TestCase):
 
     def setUp(self):

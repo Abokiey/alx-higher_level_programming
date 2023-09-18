@@ -3,9 +3,9 @@
 """unittest for base model"""
 import os
 import unittest
-from base import Base
-from rectangle import Rectangle
-from square import Square
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 class TestShapes(unittest.TestCase):
 
