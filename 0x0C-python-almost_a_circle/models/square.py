@@ -2,7 +2,7 @@
 
 """import module"""
 
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 """square subclass"""
 
