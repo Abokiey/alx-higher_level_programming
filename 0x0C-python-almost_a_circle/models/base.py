@@ -87,11 +87,13 @@ class Base:
         with open(file, 'w', newline='') as f:
             writer = csv.writer(f)
 
-        for obj in list_objs:
-            if cls.__name__ == "Rectangle":
-                data = [obj.id, obj.width, obj.height, obj.x, obj.y]
-        if cls.__name__ == "Square":
-            data = [obj.id, obj.size, obj.x, obj.y]
+            for obj in list_objs:
+                if cls.__name__ == "Rectangle":
+                    data = [obj.id, obj.width, obj.height, obj.x, obj.y]
+                if cls.__name__ == "Square":
+                    data = [obj.id, obj.size, obj.x, obj.y]
+
+                writer.writerow(data)
 
     @classmethod
     def load_from_file_csv(cls):
@@ -113,7 +115,7 @@ class Base:
                                   "size": int(row[1]),
                                   "x": int(row[2]),
                                   "y": int(row[3])}
-                instance = cls.create(**dictinary)
+                instance = cls.create(**dictionary)
                 instances.append(instance)
             return (instances)
 
