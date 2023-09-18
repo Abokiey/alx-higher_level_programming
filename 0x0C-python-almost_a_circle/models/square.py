@@ -12,7 +12,6 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
-
     @property
     def size(self):
         """size of equal width and height"""
@@ -26,8 +25,10 @@ class Square(Rectangle):
 
     def __str__(self):
         """dunder method"""
-        return ("[square] ({}) {}/{} - {}".format(self.id, self.x,
-            self.y, self.size))
+        return ("[square] ({}) {}/{} - {}".format(self.id,
+                                                  self.x,
+                                                  self.y,
+                                                  self.size))
 
     def update(self, *args, **kwargs):
         """assign attributes"""
@@ -48,6 +49,7 @@ class Square(Rectangle):
             "x": self.x,
             "y": self.y,
         }
+
 
 if __name__ == "__main__":
 

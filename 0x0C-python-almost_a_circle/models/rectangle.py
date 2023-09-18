@@ -74,12 +74,15 @@ class Rectangle(Base):
         for i in range(self.height):
             rectangle += (" " * self.x)
             rectangle += ("#" * self.width) + "\n"
-        print(rectangle,end="")
+        print(rectangle, end="")
 
     def __str__(self):
         """dunder method"""
-        return ("[rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, 
-            self.y, self.width, self.height))
+        return ("[rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                        self.x,
+                                                        self.y,
+                                                        self.width,
+                                                        self.height))
 
     def update(self, *args, **kwargs):
         """assign key/value argument to each attribute"""
@@ -93,12 +96,13 @@ class Rectangle(Base):
     def to_dictionary(self):
         """represent rectangle in a dict"""
         return {
-            "id":self.id,
-            "width":self.width,
-            "height":self.height,
-            "x":self.x,
-            "y":self.y
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
         }
+
 
 if __name__ == "__main__":
 
