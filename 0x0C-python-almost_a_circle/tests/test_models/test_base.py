@@ -40,7 +40,8 @@ class TestShapes(unittest.TestCase):
         loaded_rectangles = Rectangle.load_from_file_csv()
         loaded_squares = Square.load_from_file_csv()
 
-        self.assertEqual(len(loaded_rectangles), len(self.list_rectangles_input))
+        self.assertEqual(len(loaded_rectangles),
+                         len(self.list_rectangles_input))
         self.assertEqual(len(loaded_squares), len(self.list_squares_input))
 
 
