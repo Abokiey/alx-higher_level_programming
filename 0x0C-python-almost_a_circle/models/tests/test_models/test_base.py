@@ -10,7 +10,7 @@ from square import Square
 class TestShapes(unittest.TestCase):
 
     def setUp(self):
-        # Create test data
+        """Creating test data"""
         self.r1 = Rectangle(10, 7, 2, 8)
         self.r2 = Rectangle(2, 4)
         self.list_rectangles_input = [self.r1, self.r2]
@@ -20,7 +20,7 @@ class TestShapes(unittest.TestCase):
         self.list_squares_input = [self.s1, self.s2]
 
     def tearDown(self):
-        # Clean up created files
+        """ Cleaning up created files"""
         for cls in [Rectangle, Square]:
             json_file = "{}.json".format(cls.__name__)
             csv_file = "{}.csv".format(cls.__name__)
@@ -30,7 +30,7 @@ class TestShapes(unittest.TestCase):
                 os.remove(csv_file)
 
     def test_save_to_file_csv_and_load_from_file_csv(self):
-        # Test saving and loading from CSV files for both Rectangle and Square
+        """Test saving and loading from CSV files for the Rectangle and Square"""
         Rectangle.save_to_file_csv(self.list_rectangles_input)
         Square.save_to_file_csv(self.list_squares_input)
 
