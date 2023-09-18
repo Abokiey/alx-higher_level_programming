@@ -4,6 +4,7 @@
 
 import json
 import csv
+import turtle
 
 """base model class"""
 
@@ -119,44 +120,35 @@ class Base:
                 instances.append(instance)
             return (instances)
 
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """open a window and draw all the
+        rectangles and squares"""
+        screen = turtle.Screen()
+        screen.title("Drawing Rectangles and Squares")
 
-if __name__ == "__main__":
-    from rectangle import Rectangle
-    from square import Square
+        turt = turtle.Turtle()
+        turt.speed(2)
 
-if __name__ == "__main__":
+        for rect in list_rectangles:
+            turt.penup()
+            turt.goto(rect.x, rect.y)
+            turt.pendown()
+            turt.color("blue")
+            for i in range(2):
+                turt.forward(rect.width)
+                turt.left(90)
+                turt.forward(rect.height)
+                turt.left(90)
 
-    r1 = Rectangle(10, 7, 2, 8)
-    r2 = Rectangle(2, 4)
-    list_rectangles_input = [r1, r2]
+        for sqr in list_squares:
+            turt.penup()
+            turt.goto(square.x, square.y)
+            turt.pendown()
+            turt.color("red")
+            for j in range(4):
+                turt.forward(square.size)
+                turt.left(90)
 
-    Rectangle.save_to_file_csv(list_rectangles_input)
-
-    list_rectangles_output = Rectangle.load_from_file_csv()
-
-    for rect in list_rectangles_input:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-
-    for rect in list_rectangles_output:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-    print("---")
-
-    s1 = Square(5)
-    s2 = Square(7, 9, 1)
-    list_squares_input = [s1, s2]
-
-    Square.save_to_file_csv(list_squares_input)
-
-    list_squares_output = Square.load_from_file_csv()
-
-    for square in list_squares_input:
-        print("[{}] {}".format(id(square), square))
-
-    print("---")
-
-    for square in list_squares_output:
-        print("[{}] {}".format(id(square), square))
+        turt.hideturtle()
+        screen.mainloop()

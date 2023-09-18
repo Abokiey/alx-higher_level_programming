@@ -13,11 +13,11 @@ class TestShapes(unittest.TestCase):
     def setUp(self):
         """Creating test data"""
         self.r1 = Rectangle(10, 7, 2, 8)
-        self.r2 = Rectangle(2, 4)
+        self.r2 = Rectangle(3, 5)
         self.list_rectangles_input = [self.r1, self.r2]
 
-        self.s1 = Square(5)
-        self.s2 = Square(7, 9, 1)
+        self.s1 = Square(6)
+        self.s2 = Square(8, 3, 2)
         self.list_squares_input = [self.s1, self.s2]
 
     def tearDown(self):
