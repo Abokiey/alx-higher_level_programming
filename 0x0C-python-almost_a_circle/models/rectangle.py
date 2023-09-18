@@ -2,7 +2,7 @@
 
 """import modules"""
 
-from base import Base
+from models.base import Base
 
 """subclass rectangle"""
 
