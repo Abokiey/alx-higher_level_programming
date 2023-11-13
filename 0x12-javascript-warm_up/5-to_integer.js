@@ -1,10 +1,13 @@
 #!/usr/bin/node
+//convert to a number.
+const args = process.argv[2];
 
-const number = parseInt(process.argv[2]);
-if (Number.isNaN(number))
+if(isNaN(args))
 {
   console.log('Not a number');
-} else
+
+}
+else
 {
-  console.log('My number: ' + number);
+  console.log(`My number: ${parseInt(arg)}`);
 }
