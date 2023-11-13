@@ -7,7 +7,7 @@ if (isNaN(arg))
   console.log('Not a number');
 }
 
-else
+if (!isNaN(args))
 {
   console.log(`My number: ${parseInt(arg)}`);
 }
