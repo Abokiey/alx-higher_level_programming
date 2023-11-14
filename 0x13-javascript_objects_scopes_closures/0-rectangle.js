@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// class rectangle
+/* rectangle class */
 
 class Rectangle {
   pass;
