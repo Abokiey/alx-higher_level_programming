@@ -2,6 +2,6 @@
 
 /* rectangle class */
 
-class Rectangle {
-  pass;
-}
+class Rectangle {}
+
+module.exports = Rectangle
