@@ -2,11 +2,11 @@
 
 exports.esrever = function (list) {
   let count = list.length - 1;
-  const new_list = [];
+  const newlist = [];
   while (count >= 0) {
-    new_list.push(list[count]);
+    newlist.push(list[count]);
 
     count--;
   }
-  return new_list;
+  return newlist;
 };
