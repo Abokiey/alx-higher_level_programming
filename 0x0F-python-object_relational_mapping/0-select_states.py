@@ -2,7 +2,7 @@
 
 """import modules"""
 
-    import sys
+import sys
 import MySQLdb
 
 if __name__ == "__main__":
