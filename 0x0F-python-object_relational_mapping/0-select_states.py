@@ -7,7 +7,8 @@ import sys
 
 if __name__ == "__main__":
     """connect to the server"""
-    db = MySQLdb.connect(user=sys.argv[1], password=sys.argv[2], database=sys.argv[3], port=3306)
+    db = MySQLdb.connect(user=sys.argv[1],
+                         password=sys.argv[2], database=sys.argv[3], port=3306)
 
     """prepare cursor object"""
     cursor = db.cursor()
@@ -21,5 +22,3 @@ if __name__ == "__main__":
 
     cursor.close()
     db.close()
-
-
