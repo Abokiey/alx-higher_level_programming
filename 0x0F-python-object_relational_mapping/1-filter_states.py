@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
-"""
-Module that connects python script to a database
-"""
+"""connects python script to a database"""
 if __name__ == "__main__":
     import MySQLdb
     from sys import argv
