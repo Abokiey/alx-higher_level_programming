@@ -17,7 +17,6 @@ if __name__ = "__main__":
     states = cursor.fetchall()
 
     for state in states:
-        if (state[1][0] == 'N')
         print(state)
 
     cursor.close()
