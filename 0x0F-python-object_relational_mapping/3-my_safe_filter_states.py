@@ -21,7 +21,7 @@ if __name__ == "__main__":
         WHERE name=%s
         ORDER BY id ASC""", (argv[4], ))
 
-    states = my_cursor.fetchall()
+    states = cursor.fetchall()
 
     for state in states:
         print(state)
