@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """send a url request and display the request id"""
 
-import urllib
+import urllib.request
 from sys import argv
 
 if __name__ == "__main__":
