@@ -9,10 +9,8 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    email = {argv[2]
-}
-    resp = requests.post(argv[1], email)
+    email = argv[2]
 
-    print(resp.text)
+    resp = requests.post(argv[1], data={'email': email})
 
-    
+    print(resp.text)    
